@@ -3,6 +3,7 @@ const controller = require('../controllers/viewController');
 const authController = require('../controllers/authController');
 
 const router = express.Router();
+router.use(controller.alerts);
 router.get('/me', authController.protect, controller.getAccount);
 
 router.post('/submit-user-data', authController.protect, controller.updateUserData);
