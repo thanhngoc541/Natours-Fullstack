@@ -6,6 +6,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 // const hpp = require('hpp');
 
 const AppError = require('./utils/appError');
@@ -43,6 +44,8 @@ app.use(cookieParser());
 app.use(mongoSanitize());
 //data sanitization against xss : Query with html data
 app.use(xss());
+
+app.use(compression());
 //prevent parameter pollution : Query with multiple same-parameters : fixed => current no needed
 // app.use(
 //   hpp({

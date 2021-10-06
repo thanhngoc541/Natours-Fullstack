@@ -6,7 +6,7 @@ export const login = async (email, password) => {
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:3000/api/v1/users/login',
+      url: '/api/v1/users/login',
       data: { email, password },
     });
     if (res.data.status === 'success') {
@@ -18,14 +18,10 @@ export const login = async (email, password) => {
   }
 };
 export const signup = async (name, email, password, passwordConfirm) => {
-  console.log(name);
-  console.log(email);
-  console.log(password);
-  console.log(passwordConfirm);
   try {
     const res = await axios({
       method: 'POST',
-      url: 'http://localhost:3000/api/v1/users/signup',
+      url: '/api/v1/users/signup',
       data: { name, email, password, passwordConfirm },
     });
     if (res.data.status === 'success') {
@@ -40,7 +36,7 @@ export const logout = async (email, password) => {
   try {
     const res = await axios({
       method: 'GET',
-      url: 'http://localhost:3000/api/v1/users/logout',
+      url: '/api/v1/users/logout',
     });
     if (res.data.status === 'success') location.assign('/');
   } catch (err) {
