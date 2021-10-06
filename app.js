@@ -7,6 +7,7 @@ const xss = require('xss-clean');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const cors = require('cors');
 // const hpp = require('hpp');
 
 const AppError = require('./utils/appError');
@@ -23,6 +24,11 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 //GLOBAL MIDDLEWARE
+//implements CORS
+app.use(cors());
+//app.use(cors({origin:'http://natours.com}))
+app.options('*', cors());
+// app.options('/api/v1/tour/tourId', cors('http://natours.com'));
 //set security HTTP headers
 app.use(helmet());
 //development logging
