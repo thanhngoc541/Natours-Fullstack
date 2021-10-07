@@ -2,6 +2,10 @@
 
 Built using modern technologies: nodeJS, express, mongoDB, mongoose...
 
+API Documents: https://documenter.getpostman.com/view/15425271/UUy396ka
+
+Deployed app here: https://natours-thanhngoc.herokuapp.com/
+
 ![image](https://user-images.githubusercontent.com/53690049/136309903-f9d49639-81a0-4de9-911e-76905c9c44dc.png)
 
 ![image](https://user-images.githubusercontent.com/53690049/136309960-79983ea1-5346-40da-bd65-b5c04e93b9d9.png)
@@ -16,6 +20,6 @@ Built using modern technologies: nodeJS, express, mongoDB, mongoose...
 
 
 
-Deployed app here: https://natours-thanhngoc.herokuapp.com/
+
 
 
